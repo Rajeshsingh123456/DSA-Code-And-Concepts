@@ -30,6 +30,17 @@ int square(int b){// bek no paass parameter paass kar rhe hai
 }
 
 
+// calculate the power using function
+int powerF(int z ,int x){ // z ek no jiski power find karni hai z=2 ya 3,4,5 or x kitni power find karni 2 ki power 3 ya 4 ya 5 ya
+    int power=1;
+    for(int i=1; i<=x; i++){
+        power=power*z;
+    }
+    return power;
+}
+
+
+
  int main(){
     cout<<facto(5)<<endl; //function call
     /*int facto(int n) → function create and number receive karta hai. factorial = 1 → multiplication ki initial value.
@@ -41,6 +52,9 @@ for loop → 1 se n tak multiply karta hai.return factorial → calculated answe
     cout<<"odd";
  }
 
- cout<<endl<<square(5);
+ cout<<endl<<square(5)<<endl;
+
+
+ cout<<powerF(2 ,3); //function call kar diya or 2 or 3 no de diya jiski 2ki power 3 find karni hai or print 
 
  }
