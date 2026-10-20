@@ -19,24 +19,24 @@ int main(){
   }
 
   // for loop same 0 to 4 no print
-  int n=5; //n varible jisme 5 value li 
-  for(int i=0; i<n; i++){ // i liya usko n se chota ho yani 5 se chhota abhi i=0 hai true hai toh under print hoga 0 fir i++ hoga i=1 hoga i<n 1<5 true hai firse i print hoga yani 1
+  int n=5;   //n varible jisme 5 value li 
+  for(int i=0; i<n; i++){    // i liya usko n se chota ho yani 5 se chhota abhi i=0 hai true hai toh under print hoga 0 fir i++ hoga i=1 hoga i<n 1<5 true hai firse i print hoga yani 1
     cout<<i<<endl;
   }
 
 
 /// do while loops  print 1 to 5 no.
-int z = 1;
+  int z = 1;
 
-do{
+  do{
     cout << z << endl;
     z++;
-}while(z <= 5);
+ } while(z <= 5);
 
 
 
 
 
-return 0;
+  return 0;
 
 }
