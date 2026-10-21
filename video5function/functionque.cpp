@@ -88,9 +88,36 @@ int sumOfDigit(int n){
       cout<<"non prime";
     }
     return isPrime;
+ }
+
+// question 6 =>waf to print all prime no from 2 to n 
+/*
+logic => 2 se n tak har number ko check karenge. Har number ke liye check karenge ki woh prime hai ya nahi.
+ Agar number kisi bhi number se completely divide nahi hota,toh woh prime number hai.
+ Prime hone par us number ko print kar denge.
+*/
+
+void printPrime(int n) { // function koi value return nahi karega.printPrime → function ka naam hai.int n → function integer value receive karega.
+    for (int i = 2; i <= n; i++) {
+        bool prime = true; // Maan liya number prime hai
+
+        for (int j = 2; j < i; j++) {
+            if (i % j == 0) {
+                prime = false; // Number divide ho gaya, prime nahi hai
+                break; // Aage check karne ki zarurat nahi
+            }
+        }
+
+        if (prime) {
+            cout << i << " "; // Prime number print karenge
+        }
+    }
+}
 
 
-  }
+
+
+
 
  int main(){
     cout<<facto(5)<<endl; //function call
@@ -114,4 +141,11 @@ for loop → 1 se n tak multiply karta hai.return factorial → calculated answe
  cout<<primeOrNot(9)<<endl; //return isPrime varible ko return kiya hai usko cout  print karega 1 ya 0.false return hua toh cout 0 print karega true me 1 .
 //Lekin  function ke andar bhi cout << "non prime"; cout<<"prime" hai, isliye 9 ke liye output hoga: nonprime 0
 
- }
+
+
+
+   printPrime(5); // Direct 5 value function ko pass ki
+
+ 
+
+}
