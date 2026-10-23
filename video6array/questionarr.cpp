@@ -16,7 +16,7 @@ int main(){
     int n=5;
     int arr[n];
 
-    cout<<"Enter elements of array: ";
+    cout<<"Enter elements of array\n";
 
     // Initially maan rahe hain ki x array mein present nahi hai 
     bool flag = false;
@@ -40,13 +40,34 @@ int main(){
 
     //  Flag ki value check karege 
     if(flag == true){
-        cout<<x<<" is present in array"; //flag true hai toh x ki value hai array me 
+        cout<<x<<" is present in array\n"; //flag true hai toh x ki value hai array me 
     }
     else{
-        cout<<x<<" is not present in array";
+        cout<<x<<" is not present in array\n";
     } // dry run kar lo.
 
 
 
+// question 2 => find the smallest value out of all the element in the array 
+/* LOGIC =>smallest = INT_MAX => Initially smallest ki value sabse badi integer value rakhenge. First for loop => User se array ke 7 elements input lenge.
+Second for loop => Array ke har element ko smallest se compare karenge.Agar array ka current element smallest se chhota hai,
+toh smallest = array[i] kar denge. Loop complete hone ke baad smallest mein array ka  sabse chhota element hoga.Finally smallest ko print kar denge.
+*/
+
+int s=7;
+int array[s]; 
+cout<<"enter the element of array\n";
+
+int smallest=INT_MAX; // isme integer ki sabse badi value hogi 
+
+for(int i=0;i<s; i++){
+    cin>>array[i]; // user se array eleemnt lene ke liye 
+}
+for(int i=0; i<s; i++){  // Array ke har element ko smallest se compare karenge.
+    if(array[i]<smallest){ // smallest me max integer value hai toh arr[i]less then hi hoga true hoga 
+        smallest =array[i]; // true toh smallest me arr[i] 0ki value then chcek arr[1]index with smallest.
+    }
+}
+cout<<smallest; // smallest value print kar denge 
     
 }
