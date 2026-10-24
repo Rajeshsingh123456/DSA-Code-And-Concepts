@@ -52,11 +52,14 @@ int main(){
 /* LOGIC =>smallest = INT_MAX => Initially smallest ki value sabse badi integer value rakhenge. First for loop => User se array ke 7 elements input lenge.
 Second for loop => Array ke har element ko smallest se compare karenge.Agar array ka current element smallest se chhota hai,
 toh smallest = array[i] kar denge. Loop complete hone ke baad smallest mein array ka  sabse chhota element hoga.Finally smallest ko print kar denge.
+
+same for maximum  =>maximum = INT_MIN => Initially SABSE chooti vlue rakhi hai 
 */
 
 int s=7;
 int array[s]; 
 cout<<"enter the element of array\n";
+int maximum=INT_MIN; // maximum ko sabse chhota eleement maan rhe hai 
 
 int smallest=INT_MAX; // isme integer ki sabse badi value hogi 
 
@@ -66,8 +69,12 @@ for(int i=0;i<s; i++){
 for(int i=0; i<s; i++){  // Array ke har element ko smallest se compare karenge.
     if(array[i]<smallest){ // smallest me max integer value hai toh arr[i]less then hi hoga true hoga 
         smallest =array[i]; // true toh smallest me arr[i] 0ki value then chcek arr[1]index with smallest.
+    } 
+    
+    if(array[i]>maximum){ //Agar current element maximum se bada hai jo hoga hi hoga maximum me sabse chhota element hai 
+        maximum=array[i];
     }
 }
-cout<<smallest; // smallest value print kar denge 
-    
+cout<<"smallest ="<<smallest; // smallest value print kar denge 
+    cout<<"maximum ="<<maximum; // maximum value print kar dega 
 }
